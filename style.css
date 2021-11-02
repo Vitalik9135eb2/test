@@ -1,0 +1,284 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+button,input,optgroup,select,textarea {font-family: inherit;font-size: 100%;line-height: 1.15; margin: 0;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+button{background-color: #fff;}
+
+a{display: block;}
+body{position: relative; height: auto;}
+/*--------------------*/
+
+
+.header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.header__logo{
+    margin-left: 35px;
+    padding-left: 40px;
+    position: relative;
+    font-weight: 800;
+    color: #000;
+}
+.header__logo::before{
+    position: absolute;
+    content: "";
+    top: -8px;
+    left: 0;
+    background-image: url('./img/C4\ Portal\ Logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.main{
+    background-color: #ebebeb;
+}
+.container{
+    margin: 0 auto;
+    width: 1140px;
+    padding: 0 10px;
+}
+.main__inner{
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.main__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__info-title{
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.main__info-img{
+    margin-top: 20px;
+    width: 550px;
+}
+
+.main__card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0 25px;
+}
+
+.main__logo{
+    margin-top: 40px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 800;
+    padding-left: 60px;
+    position: relative;
+}
+.main__logo::before{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-image: url('./img/C4\ Portal\ Logo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -17px;
+    left: 0;
+}
+.main__login-text{
+    margin-top: 40px;
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    max-width: 260px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebebeb;
+}
+.main__form{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 260px;
+}
+.main__form-input{
+    margin-top: 30px;
+    height: 40px;
+    width: 100%;
+    border:1px solid #ebebeb;
+    padding-left: 10px;
+}
+.main__form-input::placeholder{
+    color: #bdbdbd;
+}
+.main__form-btn{
+    margin-top: 30px;
+    width: 100%;
+    background-color: #d78422;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 0;
+}
+.main__login{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__login-links{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ebebeb;
+}
+.main__login-link{
+    color: #cad9f2;
+}
+.main__login-span{
+    display: block;
+    margin-top: -7px;
+    background-color: #fff;
+    padding: 0 7px;
+}
+
+.main__login-google{
+    width: 100%;
+    text-align: center;
+    color: #cad9f2;
+    margin: 20px 0;
+    padding: 7px 0;
+    box-shadow: 0px 3px 4px 1px #ebebeb;
+    position: relative;
+}
+.main__login-google::before{
+    position: absolute;
+    content: "";
+    background-image: url('./img/Google\ Logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 4px;
+    left: 40px;
+}
+
+.footer{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.footer__link{
+    margin-left: 35px;
+    padding-left: 40px;
+    color: #cad9f2;
+    position: relative;
+}
+.footer__link::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url('./img/footer\ logo.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    top: -3px;
+    left: 7px;
+}
+
+.main__popup{
+    
+    display: none;
+}
+.main__popup.active{
+    z-index: 999;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9c9c9c7e;
+}
+.main__popup-inner{
+    margin: 25% auto;
+    max-width: 500px;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 20px;
+    text-align: center;
+}
+.main__popup-btn{
+    align-self: flex-end;
+}
+
+
+@media (max-width: 1599.98px){
+    .main__inner{
+        padding: 40px 0;
+    }
+}
+@media (max-width: 1199.98px){
+    .container{
+        width: 950px;
+    }
+}
+@media (max-width: 991.98px){
+    .container{
+        width: 700px;
+    }
+    .main__inner{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767.98px){
+    .container{
+        width: 540px;
+    }
+    .main__info-title{
+        text-align: center;
+    }
+    .main__info-img{
+        width: 440px;
+    }
+}
+
+@media (max-width: 576.98px){
+    .container{
+        width: 320px;
+    }
+    .main__inner{
+        padding: 20px 0;
+    }
+    .main__info-title{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .main__info-img{
+        width: 300px;
+    }
+}
