@@ -40,6 +40,11 @@ document.querySelector('.footer__link').addEventListener('click', (link) => {
 document.querySelector('.main__popup-btn').addEventListener('click', () => {
     document.querySelector('.main__popup').classList.remove('active');
     document.querySelector('.main__popup-text').innerHTML="";
+});
+
+document.querySelector('.main__popup').addEventListener('click', function () {
+    this.classList.remove('active');
+    document.querySelector('.main__popup-text').innerHTML="";
 })
 
 
